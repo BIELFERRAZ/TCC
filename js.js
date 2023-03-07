@@ -1,83 +1,20 @@
 const estados = [
     {
-    uf: "SP", cidades: [
-        {id: 1, nome: "Mongaguá"}
-       ,{id: 2, nome: "Itanhaém"}
-       ,{id: 3, nome: "Santos"}
+    uf: "Informatica", cidades: [
+        {id: 1, nome: "1I3"}
+       ,{id: 2, nome: "2I3"}
+       ,{id: 3, nome: "3I3"}
        ] 
    }
    ,
    {
-       uf: "RJ", cidades: [
-         {id: 4, nome: "Níteroi"}
-       , {id: 5, nome: "Macaé"}
-       , {id: 6, nome: "Santa Maria Madalena"}
+       uf: "Administração", cidades: [
+         {id: 4, nome: "1A3"}
+       , {id: 5, nome: "2A3"}
+       , {id: 6, nome: "3A3"}
        ] 
    }
-   ,
-   {
-       uf: "AC", cidades: [
-        {id: 7, nome: "Feijó"}
-      , {id: 8, nome: "Xapuri"}
-      , {id: 9, nome: "Bujari"}
-       ] 
-   }
-   ,
-   {
-       uf: "MS", cidades: [
-        {id: 10, nome: "Maracaju"}
-      , {id: 11, nome: "Dourados"}
-      , {id: 12, nome: "Jardim"}
-       ] 
-   }
-   ,
-   {
-       uf: "SC", cidades: [
-        {id: 13, nome: "Bombinhas"}
-      , {id: 14, nome: "Penha"}
-      , {id: 15, nome: "Balneario Camburiú"}
-       ] 
-   }
-   ,
-   {
-       uf: "AM", cidades: [
-        {id: 16, nome: "Manaus"}
-      , {id: 17, nome: "Tefé"}
-      , {id: 18, nome: "Coari"}
-       ] 
-   }
-   ,
-   {
-       uf: "MG", cidades: [
-        {id: 19, nome: "Trindade"}
-      , {id: 20, nome: "Passa Quatro"}
-      , {id: 21, nome: "Monte Verde"}
-       ] 
-   }
-   ,
-   {
-       uf: "ES", cidades: [
-        {id: 22, nome: "Vitória"}
-      , {id: 23, nome: "Serra"}
-      , {id: 24, nome: "Colatina"}
-       ] 
-   }
-   ,
-   {
-       uf: "AL", cidades: [
-        {id: 25, nome: "Penedo"}
-      , {id: 26, nome: "Murici"}
-      , {id: 27, nome: "Maceio"}
-       ] 
-   }
-   ,
-   {
-       uf: "RR", cidades: [
-        {id: 28, nome: "Iracema"}
-      , {id: 29, nome: "Bonfim"}
-      , {id: 30, nome: "Cantá"}
-       ] 
-   }
+ 
    ];
    
 
@@ -92,7 +29,7 @@ const alteraEstado = () =>{
     divSaida.innerHTML = "";
 
     if(estadoSelecionado){
-        adicionaOpcaoSelect(selectCidade, "", "Selecione uma cidade");
+        adicionaOpcaoSelect(selectCidade, "", "Selecione o modulo");
 
         const ufFiltro = estados.filter(
             estado => estado.uf === estadoSelecionado)[0];  
@@ -112,7 +49,7 @@ const ajustaComboCidades = () => {
     if (selectCidade.length > 0){
         selectCidade.disabled = false;
     }else{
-        adicionaOpcaoSelect(selectCidade, "", "---Selecione um estado---");
+        adicionaOpcaoSelect(selectCidade, "", "---Selecione o modulo---");
         selectCidade.disabled = true;
     }
 };
